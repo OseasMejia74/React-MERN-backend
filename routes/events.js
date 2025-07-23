@@ -23,7 +23,7 @@ router.get( '/', getEventos );
 router.post(
     '/', 
     [
-        check('tittle', 'El titulo es obligatorio').not().isEmpty(),
+        check('title', 'El titulo es obligatorio').not().isEmpty(),
         check('start', 'Fecha de inicio es obligatoria').custom( isDate ),
         check('end', 'Fecha de finalización es obligatoria').custom( isDate ),
         validarCampos
@@ -34,7 +34,7 @@ router.post(
 router.put(
     '/:id',
     [
-        check('tittle', 'El titulo es obligatorio').not().isEmpty(),
+        check('title', 'El titulo es obligatorio').not().isEmpty(),
         check('start', 'Fecha de inicio es obligatoria').custom( isDate ),
         check('end', 'Fecha de finalización es obligatoria').custom( isDate ),
         validarCampos
